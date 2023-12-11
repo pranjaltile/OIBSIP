@@ -49,20 +49,20 @@ class User {
 }
 
 class Authentication {
-    // Simulated user data for authentication (you can replace this with a database)
+   
     private static final User[] users = {
         new User("user1", "1234"),
         new User("user2", "5678"),
-        // Add more users as needed
+      
     };
 
     public static User authenticate(String userId, String pin) {
         for (User user : users) {
             if (user.getUserId().equals(userId) && user.getPin().equals(pin)) {
-                return user; // Return the authenticated user
+                return user; 
             }
         }
-        return null; // Return null if authentication fails
+        return null;
     }
 }
 
@@ -156,7 +156,7 @@ public class Task{
             
             User authenticatedUser = Authentication.authenticate(userId, pin);
             if (authenticatedUser != null) {
-                Account userAccount = new Account(1000); // Initialize with initial balance
+                Account userAccount = new Account(1000); 
                 
                 ATMOperations atm = new ATMOperations(userAccount);
                 atm.start();
