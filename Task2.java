@@ -1,20 +1,19 @@
-// Java program for the above approach
+
 import java.util.Scanner;
 
 public class Task2{
 
-	// Function that implements the
-	// number guessing game
+	
 	public static void
 	guessingNumberGame()
 	{
 		
 		Scanner sc = new Scanner(System.in);
-			// Generate the numbers
+			
 			int number = 1 + (int)(100
 								* Math.random());
 
-			// Given K trials
+		
 			int K = 5;
 
 			int i, guess;
@@ -25,16 +24,16 @@ public class Task2{
 				+ "Guess the number"
 				+ " within 5 trials.");
 
-			// Iterate over K Trials
+			
 			for (i = 0; i < K; i++) {
 
 				System.out.println(
 					"Guess the number:");
 
-				// Take input for guessing
+				
 				guess = sc.nextInt();
 
-				// If the number is guessed
+				
 				if (number == guess) {
 					System.out.println(
 						"Congratulations!"
@@ -66,7 +65,7 @@ public class Task2{
 		}
 	
 
-	// Driver Code
+	
 	public static void
 	main(String arg[])
 	{
